@@ -1,4 +1,5 @@
 #
+# Whereis
 # An interface to `whereis` [or `where` on Windows].
 # Copyright (c) 2011 Sam Saint-Pettersen.
 #
