@@ -4,7 +4,7 @@ require 'echoe'
 require 'fileutils'
 
 name = 'whereis'
-version = '1.1'
+version = '1.1.1'
 Echoe.new(name, version) do |p|
 	p.description = "Ruby interface to `whereis` command."
 	p.url	      = "http://github.com/stpettersens/Whereis"		
@@ -30,6 +30,5 @@ end
 task :cleanup => [:clobber] do
 	puts "Removing everything, including .gemspec"
 	FileUtils.rm("Manifest")
-	FileUtils.rm("#{name}-#{version}.gem")
 	FileUtils.rm("#{name}.gemspec")
 end

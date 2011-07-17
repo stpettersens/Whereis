@@ -27,7 +27,7 @@ module Whereis
 	end
 	def self.boolean(executable)
 		output = self.whereis(executable)
-		if output.match(/[\:|\/]+/)
+		if output.match(/[[A-Z]\:|\/]+/)
 			return true
 		else
 			return false
