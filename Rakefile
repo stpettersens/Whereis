@@ -4,7 +4,7 @@ require 'echoe'
 require 'fileutils'
 
 name = 'whereis'
-version = '1.1.2'
+version = '1.1.3'
 Echoe.new(name, version) do |p|
 	p.description = "Ruby interface to `whereis` command."
 	p.url	      = "http://github.com/stpettersens/Whereis"		
