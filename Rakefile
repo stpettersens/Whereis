@@ -4,14 +4,14 @@ require 'echoe'
 require 'fileutils'
 
 name = 'whereis'
-version = '1.1.3'
+version = '1.1.4'
 Echoe.new(name, version) do |p|
 	p.description = "Ruby interface to `whereis` command."
 	p.url	      = "http://github.com/stpettersens/Whereis"		
 	p.email	      = "s.stpettersen@gmail.com"
 	p.ignore_pattern	= []
 	p.development_dependencies = []
-	p.runtime_dependencies = ["sys-uname"]
+	p.runtime_dependencies = ["uname"]
 end
 
 task :makegem => [:build_gemspec] do

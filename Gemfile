@@ -1,3 +1,3 @@
 source :rubygems
-gem "sys-uname"
+gem "uname"
 gem "echoe"

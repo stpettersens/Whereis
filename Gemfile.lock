@@ -14,11 +14,11 @@ GEM
     rdoc (3.8)
     rubyforge (2.0.4)
       json_pure (>= 1.1.7)
-    sys-uname (0.8.5)
+    uname (1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   echoe
-  sys-uname
+  uname

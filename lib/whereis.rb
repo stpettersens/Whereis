@@ -5,8 +5,7 @@
 #
 # Released under the MIT/X11 License.
 #
-require 'sys/uname'
-include Sys
+require 'uname'
 
 module Whereis
 	def self.whereis(executable)
@@ -17,12 +16,8 @@ module Whereis
 			whereis = 'where'
 		end
 		output = IO.popen("#{whereis} #{executable}")
-		begin 
-			output = output.readlines()
-			output = output[0].chomp
-		rescue
-			output = ''
-		end
+		output = output.readlines
+		output = output[0].chomp
 		return output
 	end
 	def self.boolean(executable)
