@@ -9,15 +9,18 @@ require 'uname'
 
 module Whereis
 	def self.whereis(executable)
-		whereis = nil
 		if Uname.sysname.match(/.*n[i|u]x/)
 			whereis = 'whereis'
 		else
 			whereis = 'where'
 		end
-		output = IO.popen("#{whereis} #{executable}")
-		output = output.readlines
-		output = output[0].chomp
+		begin
+			output = IO.popen("#{whereis} #{executable}")
+			output = output.readlines
+			output = output[0].chomp
+		rescue
+			output = ''
+		end
 		return output
 	end
 	def self.boolean(executable)
